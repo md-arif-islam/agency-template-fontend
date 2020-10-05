@@ -1,0 +1,49 @@
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba($color-black, 0.6),
+      rgba($color-black, 0.6)
+    ),
+    url("../../img/hero.jpg");
+  background-position: 50% 53%;
+  background-size: cover;
+  position: relative;
+
+  &__slider {
+    width: 55%;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__slider-item {
+    text-align: center;
+    outline: none;
+    padding: 0 1rem;
+  }
+
+  &__slider-prev {
+    position: absolute;
+    top: 50%;
+    left: -10%;
+  }
+
+  &__slider-next {
+    position: absolute;
+    top: 50%;
+    right: -10%;
+  }
+
+  &__slider-icon {
+    font-size: 4rem;
+    color: rgba($color-white, 0.8);
+  }
+
+  &__btn-box {
+    margin-top: 2rem;
+    & a:first-child {
+      margin-right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.btn {
+  &:link,
+  &:visited {
+    text-transform: capitalize;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    padding: 0.6rem 3.5rem;
+    display: inline-block;
+    border-radius: 0.4rem;
+    font-size: 1.5rem;
+    color: $color-white;
+    transition: all 0.2s;
+  }
+
+  &:active {
+    outline: none;
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    border: 0.1rem solid $color-primary;
+    &:hover,
+    &:active {
+      background-color: $color-primary-dark;
+      border: 0.1rem solid $color-primary-dark;
+    }
+  }
+
+  &--secondary {
+    border: 0.1rem solid $color-white;
+    &:hover,
+    &:active {
+      background-color: $color-white;
+      color: $color-grey-dark-3;
+    }
+  }
+}

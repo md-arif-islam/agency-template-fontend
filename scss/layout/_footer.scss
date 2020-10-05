@@ -1,0 +1,65 @@
+.footer {
+    padding: 10rem 0;
+    background-color: $color-grey-dark-4;
+
+    // Footer About Area
+    &__about-box {
+        padding-right: 6rem;
+    }
+    
+    // Footer Address Area
+    &__address-box {
+        margin-top: 2.8rem;
+    }
+
+    &__address-list {
+        list-style: none;
+    }
+    
+    &__address-item {
+        margin-bottom: .8rem;
+    }
+
+    &__address-link:link,
+    &__address-link:visited {
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-family: $font-poppins;
+        letter-spacing: .4px;
+        color: $color-white;
+        transition: all .2s;
+    }
+
+    &__address-link:hover,
+    &__address-link:active {
+        color: $color-primary;
+    }
+
+    // Footer Address Area
+    &__service-box {
+        margin-top: 2.8rem;
+    }
+
+    &__service-list {
+        list-style: none;
+    }
+
+    &__service-item {
+        margin-bottom: .8rem;
+    }
+
+    &__service-link:link,
+    &__service-link:visited {
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-family: $font-poppins;
+        letter-spacing: .4px;
+        color: $color-white;
+        transition: all .2s;
+    }
+
+    &__service-link:hover,
+    &__service-link:active {
+        color: $color-primary;
+    }
+}

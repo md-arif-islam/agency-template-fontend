@@ -1,0 +1,206 @@
+.navigation {
+    padding-top: 3rem;
+    
+    &__sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        padding-top: 0;
+        background-color: $color-white;
+        border-bottom: 1px solid rgba($color-grey-dark-2, .4);
+        animation-name: animate-navigation;
+        animation-duration: .3s;
+    }
+
+    &__sticky .logo__text{
+        color: $color-grey-dark-3;
+    }
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    &__sticky &__main {
+        padding-bottom: .5rem;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: baseline;
+        margin-right: 4rem;
+
+        // Medium devices (tablets, less than 992px)
+        @media only screen and (max-width: 991.98px) {
+            display: none;
+        }
+    }
+
+    &__item {
+        padding-top: 1rem;
+        &:not(:last-child)  {
+            margin-right: 4rem;
+        }
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        color: $color-white;
+        font-size: 1.5rem;
+        letter-spacing: .5px;
+        display: inline-block;
+        padding-bottom: .1rem;
+        border-bottom: 2.5px solid transparent;
+        transition: all .2s;
+    }
+    
+    &__link:hover,
+    &__link:active {
+        border-bottom: 2.5px solid $color-primary;
+    }
+
+    &__sticky &__link:link,
+    &__sticky &__link:visited {
+        color: $color-grey-dark-3;
+    }
+
+    &__open:link,
+    &__open:visited,
+    &__open:hover,
+    &__open:active {
+        text-decoration: none;
+    }
+
+    &__btn-box {
+        // Medium devices (tablets, less than 992px)
+        @media only screen and (max-width: 991.98px) {
+            display: none;
+        }
+    }
+
+    &__open-box {
+        display: none;
+
+        // Medium devices (tablets, less than 992px)
+        @media only screen and (max-width: 991.98px) {
+            display: block;
+        }
+    }
+
+    &__open-icon {
+        font-size: 2.3rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    &__sticky &__open-icon {
+        color: $color-black;
+    }
+}
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    
+    &__overlay {
+        background-color: rgba($color-grey-dark-4, .7);
+        width: 100%;
+        height: 100%;
+        z-index: 500;
+        transition: all .8s;
+    }
+
+    &__main {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: $color-grey-dark-4;
+        transition: all 1s;
+    }
+
+    &__close-box {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 6.5rem;
+        padding: 0 2rem;
+        border-bottom: 1px solid rgba($color-grey-dark-3, .5);
+    }
+
+    &__close-icon {
+        font-size: 2.3rem;
+        color: $color-white;
+        cursor: pointer;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__btn-box {
+        padding: 5rem 2rem 2rem;
+        border-bottom: 1px solid rgba($color-grey-dark-3, .5);
+    }
+
+    &__btn-box .btn {
+        display: block;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        padding: 1.5rem;
+        border-bottom: 1px solid rgba($color-grey-dark-3, .5);
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        color: $color-white;
+        font-size: 1.5rem;
+        letter-spacing: .5px;
+        display: inline-block;
+        padding-bottom: .1rem;
+        border-bottom: 2.5px solid transparent;
+        transition: all .2s;
+    }
+    
+    &__link:hover,
+    &__link:active {
+        border-bottom: 2.5px solid $color-primary;
+    }
+
+    &--close {
+        // opacity: 0;
+        visibility: hidden;
+    }
+
+    &--close &__overlay{
+        opacity: 0;
+    }
+    
+    &--close &__main {
+        transform: translateX(260px);
+    }
+}

@@ -1,0 +1,17 @@
+.logo{
+    &__text:link,
+    &__text:visited,
+    &__text:hover,
+    &__text:active {
+        text-decoration: none;
+        font-size: 3rem;
+        font-weight: 600;
+        letter-spacing: .3px;
+        color: $color-white;
+    }
+    
+    &__text-focus {
+        color: $color-primary;
+    }
+
+}
